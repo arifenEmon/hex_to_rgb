@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="box">
+        <h1>Hex to RGB Color Converter</h1>
+        <p>Enter 6 digits hex color code and press the Convert button:</p>
+        <form action="">
+            <div id="swapToShow">
+                <label for=''>Red color (R)</label>
+                <div class="scroll">
+                    <div class="scroll-left">
+                        <input type="number" id="rScrollNum">
+                    </div>
+                    <div class="scroll-right">
+                        <input type="range" min="0" max="255" value="0" id="rScroll">
+                    </div>
+                </div>
+                <div class="scroll">
+                    <div class="scroll-left">
+                        <input type="number" id="gScrollNum">
+                    </div>
+                    <div class="scroll-right">
+                        <input type="range" min="0" max="255" value="0" id="gScroll">
+                    </div>
+                </div>
+                <div class="scroll">
+                    <div class="scroll-left">
+                        <input type="number" id="bScrollNum">
+                    </div>
+                    <div class="scroll-right">
+                        <input type="range" min="0" max="255" value="0" id="bScroll">
+                    </div>
+                </div>
+                <input type="text" id="swapDisplay" readonly>
+
+            </div>
+            <div class="swapTochangeLabel">
+                <label for="type">Hex color code (#RRGGBB)</label>
+                <br>
+                <input type="text" id="type">
+                <br>
+                <button id="convert" class="convert-btn"><i class="fas fa-sync-alt"></i>Convert</button>
+                <button id="reset" class="reset-btn"><i class="fas fa-times"></i> reset</button>
+                <button id="swap" class="swap-btn"><i class="fas fa-retweet"></i>swap</button>
+                <br>
+                <label for="r" id="r-label">Red color (R)</label>
+                <input type="text" id="r" readonly>
+                <br>
+                <label for="g" id="g-label">Green color (G)</label>
+                <input type="text" id="g" readonly>
+                <br>
+                <div id="swapToNone">
+                    <label for="b" id="b-label">Blue color (B)</label>
+                    <input type="text" id="b" readonly>
+                    <br>
+                    <label for="css">CSS color</label>
+                    <input type="text" id="css">
+                    <button id="copy"><i class="far fa-copy"></i> Copy</button>
+                    <br>
+                    <span>Color preview</span>
+                    <input type="text" id="preview" readonly>
+                </div>
+            </div>
+        
+        </form>
+        <div class="warning">
+            <p>Please enter 6 digits color code !</p>
+        </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
